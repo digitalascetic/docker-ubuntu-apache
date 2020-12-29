@@ -3,6 +3,8 @@
 
 *Based on ubuntu-{version} images*
 
+### Customization
+
 ubuntu 20.04 (default) version with apache server with mpm-event and proxy modules container configurable through environment variables:
 
 ```
@@ -10,7 +12,9 @@ ENV PHP_FPM_HOST="php"
 ENV PHP_FPM_PORT="9000"
 ```
 
-### Loaded Modules
+Also created _**/var/www/vhosts/**_ empty directory to simplify virtual hosts management.
+
+##### Loaded Modules
 
 * core_module (static)
 * so_module (static)
