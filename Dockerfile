@@ -14,7 +14,7 @@ RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-g
     apache2 libapache2-mod-fcgid && \
     service apache2 stop && \
     a2dismod mpm_prefork && \
-    a2enmod mpm_event alias proxy proxy_fcgi rewrite && \
+    a2enmod mpm_event alias proxy proxy_fcgi setenvif rewrite headers && \
     a2dissite 000-default.conf && \
     mkdir vhosts
 
